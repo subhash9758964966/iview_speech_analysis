@@ -1,0 +1,12 @@
+Flask
+Flask_Cor
+ibm_cloud_sdk_core
+ibm_watson
+keras
+librosa
+nltk
+numpy
+Pillow
+pydub
+tensorflow-cpu
+textblob
