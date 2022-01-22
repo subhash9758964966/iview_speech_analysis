@@ -59,7 +59,12 @@ def result_fun(val1):
             # json_file_name = hashlib.md5(b(val1+str(time.time()).encode('utf-8')))
             file_name = val1+str(time.time())
             json_file_name = hashlib.sha256(str(file_name).encode('utf-8')).hexdigest()
-
+            FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+            # absolute path to this file's root directory
+            PARENT_DIR = os.path.join(FILE_DIR, os.pardir) 
+            print("File Directory is ", FILE_DIR)
+            print("Parent directory is ", PARENT_DIR)
+            
             print("Current path is ", os. getcwd())
             #print("json_file_name", json_file_name)
             with open('/assets/server_json/'+json_file_name+'.json', 'w') as fp:
