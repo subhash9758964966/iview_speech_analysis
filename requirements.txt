@@ -10,3 +10,4 @@ Pillow
 pydub
 tensorflow-cpu
 textblob
+ gunicorn
