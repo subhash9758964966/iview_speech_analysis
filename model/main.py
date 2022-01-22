@@ -68,7 +68,7 @@ def result_fun(val1):
             print("Parent directory is ", PARENT_DIR)
             print("dir_of_interest is ", dir_of_interest)
             #print("json_file_name", json_file_name)
-            with open('/'+ str(dir_of_interest)+json_file_name+ '.json', 'w') as fp:
+            with open(str(dir_of_interest)+json_file_name+ '.json', 'w') as fp:
                 json.dump(chunks_dict, fp)
             print("Subhash 1 Yes")
 
