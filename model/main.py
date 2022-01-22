@@ -61,9 +61,9 @@ def result_fun(val1):
             json_file_name = hashlib.sha256(str(file_name).encode('utf-8')).hexdigest()
 
             #print("json_file_name", json_file_name)
-            with open('./assets/server_json/'+json_file_name+'.json', 'w') as fp:
+            with open('/assets/server_json/'+json_file_name+'.json', 'w') as fp:
                 json.dump(chunks_dict, fp)
-
+            print("Subhash 1 Yes")
 
             no_chunks, len_audio = index(val1, json_file_name)
 
