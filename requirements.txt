@@ -4,11 +4,11 @@ gunicorn
 ibm_cloud_sdk_core
 ibm_watson
 keras
-librosa
+librosa==0.7.2
 nltk
 numpy
 Pillow
 pydub
 tensorflow-cpu
 textblob
-ffmpeg 
+numba==0.48.0
