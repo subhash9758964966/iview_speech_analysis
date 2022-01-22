@@ -10,4 +10,5 @@ Pillow
 pydub
 tensorflow-cpu
 textblob
+pyreadline
 
