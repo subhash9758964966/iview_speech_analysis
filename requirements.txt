@@ -6,7 +6,7 @@ ibm_watson
 keras
 librosa==0.7.2
 nltk
-numpy
+numpy==1.18.1
 Pillow
 pydub
 tensorflow-cpu
