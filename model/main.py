@@ -62,7 +62,7 @@ def result_fun(val1):
 
             print("Current path is ", os. getcwd())
             #print("json_file_name", json_file_name)
-            with open('./app/assets/server_json/'+json_file_name+'.json', 'w') as fp:
+            with open('/app/assets/server_json/'+json_file_name+'.json', 'w') as fp:
                 json.dump(chunks_dict, fp)
             print("Subhash 1 Yes")
 
