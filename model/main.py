@@ -60,6 +60,7 @@ def result_fun(val1):
             file_name = val1+str(time.time())
             json_file_name = hashlib.sha256(str(file_name).encode('utf-8')).hexdigest()
 
+            print("Current path is ", os. getcwd())
             #print("json_file_name", json_file_name)
             with open('./model/assets/server_json/'+json_file_name+'.json', 'w') as fp:
                 json.dump(chunks_dict, fp)
