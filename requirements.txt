@@ -1,5 +1,6 @@
 Flask
 Flask_Cor
+gunicorn
 ibm_cloud_sdk_core
 ibm_watson
 keras
@@ -10,4 +11,4 @@ Pillow
 pydub
 tensorflow-cpu
 textblob
- gunicorn
+ 
