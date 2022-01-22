@@ -1,5 +1,5 @@
 Flask
-Flask_Cor
+Flask_Core
 gunicorn
 ibm_cloud_sdk_core
 ibm_watson
