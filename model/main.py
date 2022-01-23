@@ -11,7 +11,7 @@ import json
 import librosa
 
 
-def index(val1, json_file):
+def index(val1, json_file, dir_of_interest):
         print("val1 is ")
         sound = AudioSegment.from_mp3(file = val1)
         sound.export("test.wav", format="wav")
@@ -25,7 +25,7 @@ def index(val1, json_file):
         print("Chunks is created")
 
         # start_time = time.time()
-        preprocess_chunk_audio("test.wav", no_of_chunks, json_file)
+        preprocess_chunk_audio("test.wav", no_of_chunks, json_file, dir_of_interest)
         # overall_result_run_time = (time.time() - start_time)
         # result[0]["total_result_run_time"] = overall_result_run_time
 
@@ -72,13 +72,13 @@ def result_fun(val1):
                 json.dump(chunks_dict, fp)
             print("Subhash 1 Yes")
 
-            no_chunks, len_audio = index(val1, json_file_name)
+            no_chunks, len_audio = index(val1, json_file_name, dir_of_interest)
 
-            with open('./assets/server_json/'+str(json_file_name)+'.json') as f: 
+            with open(str(dir_of_interest)+str(json_file_name)+'.json') as f: 
                     data = json.load(f) 
 
 
-            os.remove('./assets/server_json/'+str(json_file_name)+'.json')
+            os.remove(str(dir_of_interest)+str(json_file_name)+'.json')
             # os.remove(val1)
             response={
                 "response":200,

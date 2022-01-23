@@ -15,7 +15,7 @@ import glob
 #     print('process id:', os.getpid())
 # def preprocess_chunk_audio(voice_file):
 
-def preprocess_chunk_audio(file, no_chunks, json_file):
+def preprocess_chunk_audio(file, no_chunks, json_file, dir_of_interest):
     # info("Hi")
     result = {"1":"Neutral", "2": "calm", "3":"happy", "4":"sad", "5":"angry", "6":"fearful", "7":"disgust", "8":"surprise"}
     result_gender = {"0": "Female", "1":"Male"}
@@ -61,12 +61,12 @@ def preprocess_chunk_audio(file, no_chunks, json_file):
         
 
 
-        def write_json(data, filename='./assets/server_json/'+str(json_file)+'.json'): 
+        def write_json(data, filename=str(dir_of_interest)+str(json_file)+'.json'): 
             with open(filename,'w') as f: 
                 json.dump(data, f, indent=4) 
       
       
-        with open('./assets/server_json/'+str(json_file)+'.json') as f: 
+        with open(str(dir_of_interest)+str(json_file)+'.json') as f: 
                 data = json.load(f) 
                 temp = data['chunks'] 
                 y = res_dic 
