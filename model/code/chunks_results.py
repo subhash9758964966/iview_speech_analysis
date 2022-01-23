@@ -34,7 +34,7 @@ def preprocess_chunk_audio(file, no_chunks, json_file):
 
         y_preds_index = prediction_emotion(feature_result["feature"])
         gender_preds = prediction_gender(feature_result["feature"])
-
+        print("gender is      ", gender_preds)
         senti_result = text_sentiment("./model/output/"+json_file+'/'+files)
 
         res_dic = {
@@ -52,6 +52,7 @@ def preprocess_chunk_audio(file, no_chunks, json_file):
              "time_to_run_code":(time.time() - start_time)
             
         }
+        print("dict is ", dict)
 
         # with open('file_result.txt', 'a') as outfile:
         #      outfile.write(json.dumps(res_dic))
