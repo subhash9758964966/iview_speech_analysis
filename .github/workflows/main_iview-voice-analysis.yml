@@ -30,7 +30,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          apt update
+          sudo apt update
           pip install -r requirements.txt
           sudo apt-get install libsndfile1-dev
         
