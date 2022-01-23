@@ -26,13 +26,15 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-         
+          wget https://repo.anaconda.com/archive/Anaconda3-2022.01-Linux-x86_64.sh
+          bash Anaconda3-2022.01-Linux-x86_64.sh
       
       - name: Install dependencies
         run: |
+          conda activate
           sudo apt-get update
           pip install -r requirements.txt
-          sudo apt-get install libsndfile1
+          conda install -c conda-forge ffmpeg
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
