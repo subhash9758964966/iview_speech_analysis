@@ -64,7 +64,7 @@ def result_fun(val1):
             PARENT_DIR = os.path.join(FILE_DIR, os.pardir) 
             print("File Directory is ", FILE_DIR)
             print("Parent directory is ", PARENT_DIR)
-            dir_of_interest = os.path.join(PARENT_DIR, 'assets/server_json')
+            dir_of_interest = os.path.join(PARENT_DIR, 'assets/server_json/')
             print("Parent directory is ", PARENT_DIR)
             print("dir_of_interest is ", dir_of_interest)
             #print("json_file_name", json_file_name)
