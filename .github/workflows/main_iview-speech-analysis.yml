@@ -29,7 +29,7 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-             conda install -c conda-forge ffmpeg
+             conda install ffmpeg
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
