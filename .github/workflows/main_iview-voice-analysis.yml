@@ -26,10 +26,12 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          sudo apt-get install libsndfile-dev
+         
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          sudo apt-get install libsndfile-dev
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
