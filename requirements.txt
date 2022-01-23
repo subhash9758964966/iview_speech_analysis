@@ -11,4 +11,4 @@ pydub
 tensorflow-cpu
 textblob
 pyreadline
-
+conda
